@@ -1,5 +1,5 @@
 #1
-#time complexity = O(n)
+#time complexity = O(1)
 #Space Complexity = O(1)
 if __name__ == "__main__":
     n=8
@@ -12,10 +12,9 @@ if __name__ == "__main__":
       m-=1
       if m>0:move(arr,n,m)
 
-number=[]
+
 for i in range(n) :
  number=['3','5','6','10','9','1','2','0']
-print,number
 move(number,n,m)
 print,number
 
