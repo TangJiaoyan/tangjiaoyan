@@ -30,9 +30,6 @@ def reverse(arr,start,end):
         end -= 1
  
 def rightShift(arr,k):
-    if arr == None:
-        print("Incorrect input！")
-        return
     lens = len(arr)
     k %= lens
     reverse(arr,0,lens-k-1)
@@ -52,9 +49,6 @@ if __name__ == "__main__":
 #time complexity = O(n)
 #Space Complexity = O(1)
 def rightShift(arr,k):
-    if arr == None:
-        print("Incorrect input！")
-        return
     lens = len(arr)
     k %= lens 
     while k != 0:
