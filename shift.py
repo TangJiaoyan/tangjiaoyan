@@ -1,5 +1,5 @@
 #1
-#time complexity = O(1)
+#time complexity = O(n)
 #Space Complexity = O(1)
 if __name__ == "__main__":
     n=8
