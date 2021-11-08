@@ -1,6 +1,7 @@
 def binary_search(my_list, value):
     low = 0
     high = len(my_list) - 1
+   
     while low <= high:
         mid = int((low + high) / 2)
         guess = my_list[mid]
