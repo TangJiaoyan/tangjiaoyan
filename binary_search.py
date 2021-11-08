@@ -13,6 +13,5 @@ def binary_search(my_list, value):
             return mid
     return None
 
-
 num_list = [2,5,8,12,16,23,38,56,72,91]
 print('the index is ',binary_search(num_list, 23))
