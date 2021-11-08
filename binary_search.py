@@ -15,4 +15,4 @@ def binary_search(my_list, value):
 
 
 num_list = [2,5,8,12,16,23,38,56,72,91]
-print(binary_search(num_list, 23))
+print('the index is ',binary_search(num_list, 23))
