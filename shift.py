@@ -11,8 +11,6 @@ if __name__ == "__main__":
       arr[0]=arr_end
       m-=1
       if m>0:move(arr,n,m)
-
-
 for i in range(n) :
  number=['3','5','6','10','9','1','2','0']
 move(number,n,m)
