@@ -9,10 +9,9 @@ def linear_search(arr,x):
 arr = ['3','5','2','9','6','1','8','7']
 x = '2'
  
-result = linesearch(arr,x)
+result = linear_search(arr,x)
  
 if result == -1:
     print('there no this value')
 else:
     print('the index is ',result)
-
