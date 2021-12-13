@@ -18,7 +18,6 @@ def quick_sort(rank,left,right):
         while l<h:
             if rank[l]>base:
                rank[l],rank[h]=rank[h],rank[l]
-               #右边左移
                h=h-1
                break
             else:
