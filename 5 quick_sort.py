@@ -34,6 +34,7 @@ def quick_sort(rank,left,right):
 
 nums = random.sample(range(10), 10)
 nums.extend(random.sample(range(10), 3))
+print(nums)
 quick_sort(nums,0,len(nums)-1)
 print(nums)
 
