@@ -1,4 +1,4 @@
-#3 test_bubble_sort
+#3 bubble_sort
 import random
 
 
@@ -20,4 +20,7 @@ def test_bubble_sort():
         for j in range(1, len(nums)-i):
             if nums[j - 1] <= nums[j]:
                 x = 0
-                assert x == 0
+            else:
+                x = 1
+                break
+    assert x == 0
