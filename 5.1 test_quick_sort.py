@@ -1,4 +1,4 @@
-#5 quick_sort
+#5 test_quick_sort
 import random
 
 def quick_sort(rank,left,right):
