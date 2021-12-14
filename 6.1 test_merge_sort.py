@@ -1,4 +1,5 @@
-#6 merge_sort
+
+#6 test_merge_sort
 import random
 
 def merge_sort(arr):
@@ -38,7 +39,6 @@ def merge(left, right):
     if r >= r_start:
         c.extend(right[r_start:])
     return c
-if __name__ == "__main__":
 
 def test_merge_sort():
     arr = random.sample(range(10), 10)
