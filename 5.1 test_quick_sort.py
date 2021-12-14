@@ -1,4 +1,4 @@
-#5 test_quick_sort
+#5 quick_sort
 import random
 
 def quick_sort(rank,left,right):
@@ -42,10 +42,8 @@ def test_quick_sort():
     for i in range(len(nums)):
         for j in range(1, len(nums) - i):
             if nums[j - 1] <= nums[j]:
-                   x = 0
+                x = 0
             else:
                 x = 1
                 break
-            assert x == 0
-
-
+    assert x == 0
