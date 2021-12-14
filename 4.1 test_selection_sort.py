@@ -11,7 +11,7 @@ def selection_sort(arr):
         arr[i], arr[min_indx] = arr[min_indx], arr[i]
 
 
-def test_insertion_sort():
+def test_selection_sort():
     nums = random.sample(range(10), 10)
     x = 1
     nums.extend(random.sample(range(10),3))
@@ -22,4 +22,7 @@ def test_insertion_sort():
         for j in range(1, len(nums) - i):
             if nums[j - 1] <= nums[j]:
                 x = 0
-                assert x == 0
+            else:
+                x = 1
+                break
+    assert x == 0
