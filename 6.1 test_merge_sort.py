@@ -1,54 +1,51 @@
-
-#6 test_merge_sort
+#5 test_quick_sort
 import random
 
-def merge_sort(arr):
-    if len(arr) <= 1:
-        return arr
+def quick_sort(rank,left,right):
 
-    middle = int(len(arr) / 2)
+    base=rank[left]
+    l=left
+    h=right
+    while l<h:
+        while l< h:
+            if rank[h]<base:
+                rank[h],rank[l]=rank[l],rank[h]
+                l+=1
+                break
+            else:
+                h=h-1
 
-    left = arr[:middle]
-    right = arr[middle:]
+        while l<h:
+            if rank[l]>base:
+               rank[l],rank[h]=rank[h],rank[l]
+               h=h-1
+               break
+            else:
+                l+=1
+    if l<=left:
+        pass
+    else:
+        quick_sort(rank,left,l-1)
+    if h>=right:
+        pass
+    else:
+        quick_sort(rank,h+1,right)
 
-    left_data = merge_sort(left)
-    right_data = merge_sort(right)
 
-    return merge(left_data, right_data)
-
-
-def merge(left, right):
-    c = []
-    l = len(left)
-    r = len(right)
-
-    l_start = 0
-    r_start = 0
-
-    while l_start < l and r_start < r:
-        if left[l_start] <= right[r_start]:
-            c.append(left[l_start])
-            l_start += 1
-        else:
-            c.append(right[r_start])
-            r_start += 1
-
-    if l >= l_start:
-        c.extend(left[l_start:])
-
-    if r >= r_start:
-        c.extend(right[r_start:])
-    return c
-
-def test_merge_sort():
-    arr = random.sample(range(10), 10)
+def test_quick_sort():
+    nums = random.sample(range(10), 10)
     x = 1
-    arr.extend(random.sample(range(10), 3))
-    print(arr)
-    w = merge_sort(arr)
-    print(w)
-    for i in range(len(arr)):
-        for j in range(1, len(arr)-i):
-            if arr[j - 1] <= arr[j]:
-                x = 0
-                assert x == 0
+    nums.extend(random.sample(range(10), 3))
+    print(nums)
+    quick_sort(nums, 0, len(nums) - 1)
+    print(nums)
+    for i in range(len(nums)):
+        for j in range(1, len(nums) - i):
+            if nums[j - 1] <= nums[j]:
+                   x = 0
+            else:
+                x = 1
+                break
+    assert x == 0
+
+
